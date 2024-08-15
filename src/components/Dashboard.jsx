@@ -12,8 +12,7 @@ function Dashboard() {
             <div className="grid">        
                     <Navbar />
                     <Analytic />  
-					<LastSixMonth />
-                    <History />    
+					<LastSixMonth /> 
             </div>
         </Section>
     )
