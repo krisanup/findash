@@ -20,7 +20,7 @@ function Activity() {
                 </div>
                 <div className="content">
                     <h5>Water Bill</h5>
-                    <h5 className='color'>Successfully</h5>
+                    <h5 className='color'>Paid</h5>
                 </div>
                
             </div>
@@ -38,7 +38,7 @@ function Activity() {
                 </div>
                 <div className="content">
                     <h5>Electric Bill</h5>
-                    <h5 className='color'>Successfully</h5>
+                    <h5 className='color'>Paid</h5>
                 </div>
                
             </div>
@@ -55,7 +55,7 @@ function Activity() {
                 </div>
                 <div className="content">
                     <h5>Internet Bill</h5>
-                    <h5 className='color'>Successfully</h5>
+                    <h5 className='color'>Paid</h5>
                 </div>
                 
             </div>
