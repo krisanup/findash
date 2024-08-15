@@ -33,7 +33,7 @@ function Analytic() {
                     
                 </div>
                 <div className="transfer">
-                    <h6>Current Month </h6>
+                    <h6>Last Month </h6>
                     <h6>Savings</h6>
                 </div>
                 <div className="money">
