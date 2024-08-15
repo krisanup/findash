@@ -4,6 +4,7 @@ import Notification from './Notification'
 import Card from './Card'
 import Activity from './Activity'
 import Payment from './Payment'
+import CurrentMonth from './CurrentMonth'
 
 function RightSidebar() {
     return (
@@ -11,7 +12,7 @@ function RightSidebar() {
             <div className="grid">
             <Notification />
             <Card />
-            <Activity />
+            <CurrentMonth />
             <Payment />
 
             </div>
