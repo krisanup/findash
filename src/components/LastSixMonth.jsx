@@ -35,8 +35,9 @@ function LastSixMonth() {
                         <YAxis tickFormatter={DataFormater}  />
                         <Tooltip formatter={(value) => `$${value.toFixed(2)}`} />
                         <Legend tickFormatter={DataFormater} />
-                        <Bar dataKey="Spending" tickFormatter={DataFormater} stackId="a" fill="#f59793" />
-                        <Bar dataKey="Income" tickFormatter={DataFormater} stackId="a" fill="#f9f8f6" />
+                        <Bar dataKey="Income"   stroke="#B43535" tickFormatter={DataFormater} stackId="a" fill="#F9F8F6" />
+						<Bar dataKey="Spending"   tickFormatter={DataFormater} stackId="b" fill="#B43535" />
+                        
                      </BarChart>
                     </ResponsiveContainer>
                 </div>
@@ -49,39 +50,33 @@ export default LastSixMonth
 const data = [
     {
       name: 'February',
-      Income: 4000,
-      Spending: 2400,
-      amt: 2400,
+      Income: 7000,
+      Spending: 6675, 
     },
     {
       name: 'March',
-      Income: 3000,
-      Spending: 1398,
-      amt: 2210,
+      Income: 7000,
+      Spending: 4260, 
     },
     {
       name: 'April',
-      Income: 2000,
-      Spending: 9800,
-      amt: 2290,
+      Income: 7000,
+      Spending: 5575, 
     },
     {
       name: 'May',
-      Income: 2780,
-      Spending: 3908,
-      amt: 2000,
+      Income: 7000,
+      Spending: 3460, 
     },
     {
       name: 'June',
-      Income: 1890,
-      Spending: 4800,
-      amt: 2181,
+      Income: 7000,
+      Spending: 6480, 
     },
     {
       name: 'July',
-      Income: 2390,
-      Spending: 3800,
-      amt: 2500,
+      Income: 7000,
+      Spending: 6780, 
     } 
 
 
