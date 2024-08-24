@@ -5,6 +5,7 @@ import Analytic from './Analytic'
 import Balance from './Balance'
 import History from './History' 
 import LastSixMonth from './LastSixMonth' 
+import Example from './example'
 function Dashboard() {
     return (
         <Section>
@@ -13,6 +14,7 @@ function Dashboard() {
                     <Navbar />
                     <Analytic />  
 					<LastSixMonth /> 
+                    <Example></Example>
             </div>
         </Section>
     )
