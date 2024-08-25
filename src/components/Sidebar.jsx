@@ -28,6 +28,15 @@ function Sidebar() {
                                     
                                 </a>
                             </li>
+							 <li
+                            className={currentLink === 6 ? "active" : "none"}
+                            onClick={() => setCurrentLink(6)}
+                            >
+                                <a href="#">
+                                    <AiOutlineDotChart />
+                                    
+                                </a>
+                            </li>
                             <li
                             className={currentLink === 3 ? "active" : "none"}
                             onClick={() => setCurrentLink(3)}
@@ -46,24 +55,8 @@ function Sidebar() {
                                     <span>2</span>
                                 </a>
                             </li>
-                            <li
-                            className={currentLink === 5 ? "active" : "none"}
-                            onClick={() => setCurrentLink(5)}
-                            >
-                                <a href="#">
-                                    <AiOutlineTrophy />
-                                    
-                                </a>
-                            </li>
-                            <li
-                            className={currentLink === 6 ? "active" : "none"}
-                            onClick={() => setCurrentLink(6)}
-                            >
-                                <a href="#">
-                                    <AiOutlineDotChart />
-                                    
-                                </a>
-                            </li>
+                            
+                           
                           
                         </ul>
                     </div>

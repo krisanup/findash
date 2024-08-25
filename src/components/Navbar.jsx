@@ -16,7 +16,7 @@ function Navbar() {
 export default Navbar
 const Nav = styled.nav`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     color: black;
     .title{
         h5{

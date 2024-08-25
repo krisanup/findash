@@ -1,17 +1,16 @@
 import React from 'react'
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import styled from "styled-components";
-function LastSixMonth({activeStep}:int) {
+function WeeklySpendingPattern({activeStep}:int) {
 	const DataFormater = (number) => { 
     return "$"+number.toString();
   } 
   const CustomTooltip = ({ active, payload, label }) => {
-  if (active && payload && payload.length  ) {
+  if (active && payload && payload.length   ) {
     return (
       <div className="recharts-default-tooltip" > 
         <p className="desc">{`${label}`}</p>
-        <p className="label">{`${payload[0].name} : ${DataFormater(payload[0].value)}`}</p> 
-		<p className="label">{`${payload[1].name} : ${DataFormater(payload[1].value)}`}</p> 
+        <p className="label">{`${payload[0].name} : ${DataFormater(payload[0].value)}`}</p>  
       </div>
     );
   }
@@ -19,14 +18,14 @@ function LastSixMonth({activeStep}:int) {
   return null;
 };
     return (
-        <Section style={{ display: activeStep===0 ? 'block' : 'none' }}>
-            <div className="sixmonths">
-                <div className="sixmonths__details">
+        <Section style={{ display: activeStep===2 ? 'block' : 'none' }}>
+            <div className="weekly">
+                <div className="weekly_details">
                     <div>
-                        <h4>SPENDING PATTERN <h5>LAST 6 MONTHS</h5></h4>
+                        <h4>WEEKLY SPENDING PATTERN <h5>THIS MONTH</h5></h4>
                     </div>
                 </div>
-                <div className="sixmonths__graph">
+                <div className="weekly_graph">
                     <ResponsiveContainer width="100%" height="150%">
 
                     <BarChart
@@ -42,12 +41,10 @@ function LastSixMonth({activeStep}:int) {
                         >
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
-                        <YAxis tickFormatter={DataFormater}  />
-                     
-						   <Tooltip  content={<CustomTooltip />} />
+                        <YAxis tickFormatter={DataFormater}  /> 
+						   <Tooltip  content={<CustomTooltip />}  />
                         <Legend tickFormatter={DataFormater} />
-                        <Bar dataKey="Income"   stroke="#B43535" tickFormatter={DataFormater} stackId="a" fill="#787070" />
-						<Bar dataKey="Spending"   tickFormatter={DataFormater} stackId="b" fill="#B43535" />
+                        <Bar dataKey="Spending"   tickFormatter={DataFormater} stackId="b" fill="#B43535" />
                         
                      </BarChart>
                     </ResponsiveContainer>
@@ -57,47 +54,45 @@ function LastSixMonth({activeStep}:int) {
     )
 }
 
-export default LastSixMonth
+export default WeeklySpendingPattern
 const data = [
     {
-      name: 'February',
-      Income: 7000,
-      Spending: 6675, 
+      name: 'Sun', 
+      Spending: 600, 
     },
     {
-      name: 'March',
-      Income: 7000,
-      Spending: 4260, 
+      name: 'Mon', 
+      Spending: 450, 
     },
     {
-      name: 'April',
-      Income: 7000,
-      Spending: 5575, 
+      name: 'Tue', 
+      Spending: 400, 
     },
     {
-      name: 'May',
-      Income: 7000,
-      Spending: 3460, 
+      name: 'Wed', 
+      Spending: 500, 
     },
     {
-      name: 'June',
-      Income: 7000,
-      Spending: 6480, 
+      name: 'Thu', 
+      Spending: 350, 
     },
     {
-      name: 'July',
-      Income: 7000,
-      Spending: 6780, 
+      name: 'Fri' ,
+      Spending: 2100, 
+    } ,
+    {
+      name: 'Sat' ,	
+      Spending: 1800, 
     } 
 
 
   ];
 const Section = styled.section`
    
-.sixmonths{
+.weekly{
     color: black;
     width: 100%;
-    .sixmonths__details {
+    .weekly_details {
         display: flex;
         justify-content: space-between;
         margin: 1rem 0;
@@ -109,7 +104,7 @@ const Section = styled.section`
             }
         }
     }
-    .sixmonths__graph{
+    .weekly_graph{
         height: 10rem;
         width: 100%;
         .recharts-default-tooltip {

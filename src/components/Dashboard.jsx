@@ -3,18 +3,21 @@ import styled from 'styled-components'
 import Navbar from './Navbar'
 import Analytic from './Analytic'
 import Balance from './Balance'
-import History from './History' 
-import LastSixMonth from './LastSixMonth' 
-import Example from './example'
+import History from './History'  
+import Example from './example'    
+import Recommendations from './Recommendations' 
+import Insights from './Insights'    
 function Dashboard() {
     return (
         <Section>
            
             <div className="grid">        
                     <Navbar />
-                    <Analytic />  
-					<LastSixMonth /> 
-                    <Example></Example>
+                    <Analytic />    
+					<Recommendations />
+					 <hr class="dashed"/>
+					 <Insights />
+					
             </div>
         </Section>
     )
