@@ -24,7 +24,7 @@ function Recommendations(props) {
         {
             name: "Wells Fargo Active Cash® Credit Card",
             description: "Earn a $200 cash rewards bonus when you spend $500 in purchases in the first 3 month",
-			special: "Best suited for you since your spend from Walmart & C",
+			special: "Recommended for you since you buy regularly from Walmart & Target",
 			button: "More Details",
             imageurl:back1
           
@@ -39,7 +39,7 @@ function Recommendations(props) {
         {
             name: "Lower your interest paid which may reduce your debt faster",
             description: "Our Debt Consolidation Calculator estimates options for reduced interest and payment terms.",
-			special: "Best suited for you since you are spending on Mortgage more",
+			special: "Suggested for you since you are spending on Mortgage more",
 			button: "Debt Consolidation Calculator",
             imageurl:back3
         }
