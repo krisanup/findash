@@ -6,8 +6,10 @@ import styled from "styled-components";
 import choice from '../assets/choice.png' 
 import activecash from '../assets/activecash.png'
 import back1 from '../assets/rec-back-1.png'
-import back2 from '../assets/rec-back-3.png'
-import back3 from '../assets/rec-back-4.png'
+import back2 from '../assets/rec-back-2.png'
+import back3 from '../assets/rec-back-3.png'
+import back4 from '../assets/rec-back-4.png'
+import back5 from '../assets/rec-back-5.png'
 
 function Recommendations(props) {
 	const CallActionButton = styled(Button)({
@@ -21,7 +23,14 @@ function Recommendations(props) {
 		  borderColor: '#0063cc', 
 	});
     var items = [
+        
         {
+            name: "Time for guidance, not for guessing.",
+            description: "A financial advisor can help you with some much-needed clarity.",
+			special: "WellsFargo provides dedicated Financial Advisor",
+			button: "Get a free consultation",
+            imageurl:back4
+        },{
             name: "Wells Fargo Active Cash® Credit Card",
             description: "Earn a $200 cash rewards bonus when you spend $500 in purchases in the first 3 month",
 			special: "Recommended for you since you buy regularly from Walmart & Target",
@@ -50,7 +59,7 @@ function Recommendations(props) {
             <div className="recommendations">
 			 <div className="recomm_details">
                     <div>
-                        <h4>RECOMMENDATIONS</h4>
+                       <br/> <h4>RECOMMENDATIONS</h4><br/>
                     </div> 
                 </div>
                 <div className="rec_graph">
@@ -81,8 +90,9 @@ const Section = styled.section`.recomm{
 			div{
             display: flex;
             gap: 1rem;
-            h5{
-                color: gray;
+            h4{
+                color: gray; 
+				 padding-bottom:18px;
             }
         }
 		}
